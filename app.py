@@ -32,6 +32,7 @@ def generate_course_plan(title, duration, audience, num_chapters):
        - Un titre pour chaque chapitre.
        - Une description très détaillée pour chaque chapitre (6 à 8 lignes).
        - Une énumération des sous-chapitres avec leurs titres et une brève explication.
+    4. Une conclusion résumant les points clés de la formation.
     """
     
     response = openai.ChatCompletion.create(
@@ -53,10 +54,11 @@ def generate_chapter_content(chapter_title):
        - Des cas d’usage réels et des scénarios pratiques illustrant les concepts (1 à 2 pages par cas).
        - Des illustrations ou des analogies pour clarifier les concepts complexes.
     3. Des blocs de code formatés comme exemples pratiques (code SQL, Python, ou autre selon le contexte) avec explications détaillées.
-    4. Des exercices pratiques pour chaque sous-chapitre, avec des instructions claires.
-    5. Une étude de cas complète couvrant les concepts du chapitre, avec une solution détaillée (environ 4 à 5 pages).
-    6. Une section "Bonnes pratiques" expliquant comment appliquer les concepts efficacement dans des situations réelles.
-    7. Une conclusion développée récapitulant les points essentiels du chapitre et suggérant des lectures complémentaires.
+    4. Chapitre sur la programmtion des sites adapte aux handicapes
+    5. Des exercices pratiques pour chaque sous-chapitre, avec des instructions claires.
+    6. Une étude de cas complète couvrant les concepts du chapitre, avec une solution détaillée (environ 4 à 5 pages).
+    7. Une section "Bonnes pratiques" expliquant comment appliquer les concepts efficacement dans des situations réelles.
+    8. Une conclusion développée récapitulant les points essentiels du chapitre et suggérant des lectures complémentaires.
     
     Attention : assurez-vous que le contenu soit suffisamment détaillé pour atteindre environ 15 à 25 pages.
     """
