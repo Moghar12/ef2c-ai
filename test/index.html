@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EF2C AI - Générateur de Contenu de Cours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>EF2C AI - Générateur de Contenu de Cours</h1>
+  </header>
+  <main>
+    <section id="form-section">
+      <h2>Détails de la formation</h2>
+      <form id="course-form">
+        <label for="title">Titre de la formation :</label>
+        <input type="text" id="title" name="title" required>
+        
+        <label for="duration">Durée de la formation :</label>
+        <input type="text" id="duration" name="duration" required>
+        
+        <label for="audience">Public concerné :</label>
+        <textarea id="audience" name="audience" required></textarea>
+        
+        <label for="numChapters">Nombre de chapitres :</label>
+        <input type="number" id="numChapters" name="numChapters" min="1" max="15" value="5" required>
+        
+        <button type="submit">Générer le Plan du Cours</button>
+      </form>
+    </section>
+    <section id="output-section" hidden>
+      <h2>Plan de Cours Généré</h2>
+      <pre id="course-plan-output"></pre>
+      <button id="download-plan">Télécharger le Plan du Cours</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
