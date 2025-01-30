@@ -4,8 +4,13 @@ from dotenv import load_dotenv
 import os
 from fpdf import FPDF
 
-load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+st.sidebar.header("Configuration de l'API")
+api_key = st.sidebar.text_input("Entrez votre clé API OpenAI", type="password")
+
+if api_key:
+    openai.api_key = api_key
+else:
+    st.sidebar.warning("Veuillez entrer votre clé API pour continuer.")
 
 def generate_pdf(content, filename):
     pdf = FPDF()
